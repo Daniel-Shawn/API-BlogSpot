@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: crimson;
+    text-align: center;
+}
+body h1{
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 5px;
+    font-size: 2.4em;
+    text-decoration: underline;
+}
+.blog{
+    position: fixed;
+    background-color: #777;
+    top: 0;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: +2;
+    transition: .3s linear;
+}
+.blog.active{
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+.blog .close{
+    width: 10%;
+    color: #fff;
+    cursor: pointer;
+    padding: .7em;
+    font-size: 1.4em;
+}
+.blog form{
+    position: relative;
+    border: 1px solid #fff;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    padding: 1em;
+}
+.blog form ::placeholder{
+    text-align: center;
+    font-size: 1.1em;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blog form #blog-body,
+.blog form #blog-title{
+    padding: .3em;
+    font-size: 1.1em;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+}
+.blog form #blog-title{
+    min-height: 8vh;
+}
+.blog form #blog-body{
+    min-height: 45vh;
+}
+.blog form button{
+    border: 0;
+    outline: 0;
+    max-width: 40%;
+    margin: 0 auto;
+    font-size: 1.1em;
+    padding: .4em .8em;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.blog form button:hover{
+    background-color: aqua;
+}
+.blog form button:active{
+    background-color: red;
+}
+.menu {
+    margin: .5em 0;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding: 1em;
+}
+.menu i{
+    color: #fff;
+    font-size: 1.4em;
+    cursor: pointer;
+}
+.menu a i:hover{
+    color: aqua;
+}
+.menu > *{
+    margin: 0 1em;
+    transition: .3s ease;
+}
+.menu > *:hover{
+    color: aqua;
+}
+.menu a{
+    cursor: pointer;
+    font-size: 1.3em;
+    color: #fff;
+}
+.content{
+    position: relative;
+    width: 95%;
+    border-radius: 5px;
+    margin: 0 auto;
+    background-color: hsl(348, 83%, 37%);
+    color: #fff;
+    padding: .5em;
+}
+.content div{
+    background-color: black;
+    min-height: fit-content;
+    position: relative;
+    width: 100%;
+    margin: 1em 0;
+    padding: .5em;
+}
+
+.content div h2, .content div h3{
+    position: relative;
+    display: inline-block;
+}
+.content div h3{
+    font-size: 1.5em;
+    float: left;
+    color: blue;
+}
+.content div h2{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+}
+.content div p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
